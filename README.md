@@ -1,6 +1,8 @@
 # CPPGameLauncher PatchCreator
 This tool is used to create the necessary patch files for CPPGameLauncher. It can iterate through all files in a directory, compress them, create checksums, and write manifest files.
 
+For the accompanying launcher, see: https://github.com/huvolk/CPPGameLauncher
+
 # Installation
 1. Clone this repository.
 2. Open the .iml project file with IntelliJ Idea.
