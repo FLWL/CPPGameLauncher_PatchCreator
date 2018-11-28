@@ -6,17 +6,13 @@ This tool is used to create the necessary patch files for CPPGameLauncher. It ca
 2. Open the .iml project file with IntelliJ Idea.
 3. Add Apache Commons IO .jar file to the dependencies
 4. Set up the directory structure and other constants in the "cpp.game.launcher.Constants" class:
-
+```
 "baseDirectory" is the main directory where all others are located in.
-
 "gameDirectory" is a directory inside the base directory where the game files that are to be distributed to the players are located in.
-
 "uploadDirectory" is where the patcher will put ready-made patch files into.
-
 "patchGameVersion" is the version to give to the game files in the patch
-
 "patchLauncherVersion" is the version to distribute the launcher as
-
+```
 5. Download or compile OpenSSL binaries, specifically the openssl.exe command line tool is required to generate RSA keypairs. Run the following commands.
 
 Generate a key pair:
@@ -51,13 +47,10 @@ First 3 of such entries will be shown in the launcher.
 
 # Patch structure
 After creating a patch, the "upload" directory will contain the following:
-
+```
 latest.txt - a text file containing information about the latest game and launcher versions
-
 news.txt - news file that the launcher will show on the main page
-
 latest.sig and news.sig - signature files for launcher to confirm the authenticity of those files
-
 latest_launcher.exe - a copy of the CPPGameLauncher's .exe file. The launcher will replace itself with this file if it detects that its current version is less than one specified in latest.txt
-
+```
 The folder will also contain a numerically named version folder, where the actual compressed .gz game files are located. Inside that folder there is a manifest file called "checksums.txt", which contains the information about all game files that are to be downloaded, including CRC hashes, filesizes, etc. Likewise this file is accompanied with "checksums.sig" for verification.
