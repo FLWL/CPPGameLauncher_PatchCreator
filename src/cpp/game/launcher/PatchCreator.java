@@ -227,7 +227,7 @@ public class PatchCreator
         output += "\t" + sha256Hash;
 
         // Finalize the line in the checksum file
-        outputBw.write(output + "\r\n");
+        outputBw.write(output + "\n");
     }
 
     // Create base64 encoded signature using SHA256/RSA.
